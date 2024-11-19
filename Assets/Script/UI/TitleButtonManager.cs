@@ -7,7 +7,7 @@ public class TitleButtonManager : MonoBehaviour
 
     public void StartGame()
     {
-        // 게임 시작 시, 게임 씬으로 이동
+        SceneManager.LoadScene("MainGame");
     }
 
     public void OpenOptions()
