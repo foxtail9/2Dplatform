@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         //Test
         if (Input.GetKeyDown(KeyCode.W)) 
         {
-            TakeDamage(50);
+            TakeDamage(20);
         }
     }
 
