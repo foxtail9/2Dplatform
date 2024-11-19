@@ -21,7 +21,7 @@ public class LogoManager : MonoBehaviour
 
     private IEnumerator ShowLogos()
     {
-        // 회사 로고 페이드 인
+        // 회사 로고 페이드 인y
         yield return StartCoroutine(FadeIn(companyCanvasGroup));
         yield return new WaitForSeconds(displayTime);
         yield return StartCoroutine(FadeOut(companyCanvasGroup));
