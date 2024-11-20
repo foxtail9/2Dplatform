@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public HealthBar healthBar;
     public int maxHealth = 100;   
     public int currentHealth;    
     public int attackDamage = 10; 
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -35,7 +37,8 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
 
         animator.SetTrigger("Hurt");
-
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+        healthBar.SetHealth(currentHealth);
         if (currentHealth <= 0)
         {
             Die();
