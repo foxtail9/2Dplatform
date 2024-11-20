@@ -4,14 +4,16 @@ using UnityEngine;
 public class DropItemInfo : MonoBehaviour
 {
     private ContainableItem itemData;
-    private TextMeshProUGUI itemName;
-    private TextMeshProUGUI itemDescription;
+    [SerializeField]
+    private TextMeshPro itemName;
+    [SerializeField]
+    private TextMeshPro itemDescription;
     private Collider2D collision;
     
     public void SetInfo(ContainableItem item, Collider2D playerCollider)
     {
         itemData = item;
-        itemName.text = itemData.name;
+        itemName.text = itemData.ItemName;
         itemDescription.text = itemData.ItemExplanation;
         collision = playerCollider;
     }
