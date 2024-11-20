@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 5f;
-    private float jumpForce = 6f;
+    public float jumpForce = 6f;
     private bool isFacingRight = true;
     private bool isGrounded = true;
 
