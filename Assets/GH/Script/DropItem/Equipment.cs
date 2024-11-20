@@ -5,7 +5,6 @@ using UnityEngine;
 public enum EquipmentType
 {
     Weapon,
-    Helmet,
     Armor
 }
 [CreateAssetMenu(fileName = "Equipment", menuName = "ContainableItem/Equipment", order = 0)]
