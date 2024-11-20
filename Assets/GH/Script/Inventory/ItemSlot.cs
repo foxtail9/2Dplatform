@@ -8,30 +8,31 @@ using UnityEngine.UI;
 public class ItemSlot : MonoBehaviour
 {
     public ContainableItem item;
-    public Image image;
-    public TextMeshProUGUI itemQuantity;
-    public TextMeshProUGUI itemEquiped;
+    public GameObject image;
+    public GameObject itemQuantity;
+    public GameObject itemEquiped;
 
     public void Reset()
     {
         item=null;
-        image.sprite = null;
-        image.enabled = false;
-        itemQuantity.text = null;
-        itemQuantity.enabled = false;
+        image.GetComponent<Image>().sprite = null;
+        image.SetActive(false);
+        itemQuantity.GetComponent<TextMeshProUGUI>().text = null;
+        itemQuantity.SetActive(false);
+        itemEquiped.SetActive(false);
     }
 
     public void SetItem(ContainableItem containableItem, int quantity)
     {
         item = containableItem;
-        image.sprite=containableItem.IconSprite;
-        image.enabled = true;
-        itemQuantity.text = quantity.ToString();
-        if (containableItem as Usable != null) itemQuantity.enabled = true;
+        image.GetComponent<Image>().sprite=containableItem.IconSprite;
+        image.SetActive(true);
+        itemQuantity.GetComponent<TextMeshProUGUI>().text = quantity.ToString();
+        if (containableItem as Usable != null) itemQuantity.SetActive(true);
         if(containableItem as Equipment != null /*&& 현재 장착되어 있는 아이템과 같은지 비교*/ )
         {
-            itemEquiped.enabled = true;
-            itemEquiped.text = "E";
+            itemEquiped.SetActive(true);
+            itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
         }
     }
 

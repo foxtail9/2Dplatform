@@ -11,6 +11,6 @@ public class Coin : OnFieldItem
     {
         //캐릭터 정보 중 돈 증가
         CharacterInventory characterInventory = PlayerObject.GetComponent<CharacterInventory>();
-        characterInventory.money += coinAmount;
+        /*characterInventory.money += coinAmount;*/
     }
 }
