@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]
-    GameObject playerinveninventory;
+    public GameObject playerinveninventory;
+    public GameObject showmenu;
 
     public void Openinventory()
     {
         playerinveninventory.SetActive(true);
+    }
+
+    public void Openmenu()
+    {
+        showmenu.SetActive(true);
     }
 }
