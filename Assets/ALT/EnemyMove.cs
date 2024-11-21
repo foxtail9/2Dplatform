@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour
 		spriteRenderer = GetComponent<SpriteRenderer>();
 		Think();
 
-		Invoke("Think", 6);
+		Invoke("Think", 5);
 	}
 
 	void FixedUpdate()
@@ -62,7 +62,7 @@ public class EnemyMove : MonoBehaviour
 		nextMove *= -1;
 		spriteRenderer.flipX = nextMove == 1;
 		CancelInvoke();
-		Invoke("Think", 6);
+		Invoke("Think", 5);
 	}
 
 	void CheckForWalls()

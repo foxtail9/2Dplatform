@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6796228118472482398}
   - component: {fileID: 7384950936943632058}
   - component: {fileID: 6258333867171825109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving Tiles (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ Transform:
   m_GameObject: {fileID: 687228436044777052}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.1111164, y: 6.5405045, z: -10}
+  m_LocalPosition: {x: -7.1111164, y: 7.2405047, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -334,7 +334,7 @@ Transform:
   m_GameObject: {fileID: 1676923777757047402}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.688681, y: 6.540505, z: -10}
+  m_LocalPosition: {x: -10.58868, y: 7.2405047, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 760374419146505660}
   - component: {fileID: 9148742512211643683}
   - component: {fileID: 6677465447438606790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4078,7 +4078,7 @@ GameObject:
   - component: {fileID: 2252709908173194935}
   - component: {fileID: 3522591664569181348}
   - component: {fileID: 1296362701313026228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving Tiles (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4221,7 +4221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748737392816932043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +4259,7 @@ GameObject:
   - component: {fileID: 3597611976995012557}
   - component: {fileID: 4776746706438680299}
   - component: {fileID: 6968693167203441231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Outside the map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8142,7 +8142,7 @@ GameObject:
   - component: {fileID: 9013037457000612453}
   - component: {fileID: 6807077747605056514}
   - component: {fileID: 4059405595476018788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving Tiles
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -25126,7 +25126,7 @@ GameObject:
   - component: {fileID: 1322773997816019550}
   - component: {fileID: 7328261508709356605}
   - component: {fileID: 2749389104663061698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving Tiles (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
