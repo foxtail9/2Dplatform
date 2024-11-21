@@ -12,6 +12,7 @@ public class ItemSlot : MonoBehaviour
     public GameObject itemQuantity;
     public GameObject itemEquiped;
 
+
     public void Reset()
     {
         item=null;
@@ -38,13 +39,6 @@ public class ItemSlot : MonoBehaviour
 
     public void OnClickItemSlot()
     {
-        if (item as Usable != null)
-        {
-            //사용 아이템 관련 메뉴창 열기
-        }
-        else if (item as Equipment != null)
-        {
-            //장착 관련 메뉴창 열기
-        }
+        transform.root.GetChild(1).GetComponent<CharacterInventory>().SetItemDec(item);
     }
 }

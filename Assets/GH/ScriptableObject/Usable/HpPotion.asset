@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ContainableItemNum: 0
   ItemName: "\uCCB4\uB825 \uD3EC\uC158"
-  ItemExplanation: "\uC0AC\uC6A9\uC2DC \uCCB4\uB825\uC744 50 \uD68C\uBCF5\uC2DC\uCF1C\uC90D\uB2C8\uB2E4."
+  ItemExplanation: "\uBD89\uC740\uC0C9\uC758 \uBB3C\uC57D. \uB538\uAE30\uB9DB\uC774
+    \uB0A0 \uAC83 \uCC98\uB7FC \uC0DD\uACBC\uC9C0\uB9CC \uC0AC\uC2E4 \uAF64 \uB9DB
+    \uC5C6\uB2E4."
   IconSprite: {fileID: -1360136427, guid: 2a194a77ecc35d343902443e22ad6a03, type: 3}
+  Power: 0
   type: 0
-  power: 50

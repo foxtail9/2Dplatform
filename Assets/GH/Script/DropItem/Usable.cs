@@ -11,7 +11,7 @@ public enum UsableType
 public class Usable : ContainableItem
 {
     public UsableType type;
-    public int power;
+    
     public override void GetItem(GameObject playerObject)
     {
         //아이템을 인벤토리에 추가.이미 있다면 갯수 증가.
