@@ -11,7 +11,7 @@ public enum EquipmentType
 public class Equipment : ContainableItem
 {
     public EquipmentType type;
-    public int power;
+    
     public int price;
     public override void GetItem(GameObject playerObject)
     {

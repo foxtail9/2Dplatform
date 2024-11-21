@@ -10,5 +10,6 @@ public abstract class ContainableItem : ScriptableObject
     public string ItemName;
     public string ItemExplanation;
     public Sprite IconSprite;
+    public int Power;
     abstract public void GetItem(GameObject playerObject);
 }

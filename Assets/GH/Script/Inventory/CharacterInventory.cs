@@ -10,10 +10,12 @@ public class CharacterInventory : MonoBehaviour
     public List<ItemSlot> itemSlots;
     public List<ContainableItem> itemList;
     public List<int> itemCount;
+    public ItemDec itemDec;
 
     private void OnEnable()
     {
         UpdateInventoryUI();
+        itemDec.SetItemData(null);
     }
     public void UpdateInventoryUI()
     {
@@ -33,5 +35,10 @@ public class CharacterInventory : MonoBehaviour
     public void OnClickExit()
     {
         gameObject.SetActive(false);
+    }
+
+    public void SetItemDec(ContainableItem itemData)
+    {
+        itemDec.SetItemData(itemData);
     }
 }
