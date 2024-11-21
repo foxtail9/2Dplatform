@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TestEnemy : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
     public int maxHealth = 50; 
     public int currentHealth;  
@@ -21,7 +21,7 @@ public class TestEnemy : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject, 0.5f); 
+        Destroy(gameObject, 0.3f); 
     }
 }
 

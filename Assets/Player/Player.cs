@@ -120,7 +120,7 @@ public class Player : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<TestEnemy>()?.TakeDamage(attackDamage);
+            enemy.GetComponent<EnemyDamage>()?.TakeDamage(attackDamage);
         }
 
         canAttack = false;
