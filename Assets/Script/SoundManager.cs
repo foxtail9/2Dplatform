@@ -2,67 +2,49 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
+    public static SoundManager Instance { get; private set; }
 
-    [Header("Audio Sources")]
-    public AudioSource bgmSource;  // BGM 재생용 AudioSource
-    public AudioSource vfxSource; // VFX 재생용 AudioSource
-
-    [Header("Audio Clips")]
-    public AudioClip defaultBGM; // 기본 BGM 클립
+    public AudioSource bgmAudioSource;  // BGM을 재생할 AudioSource
+    public float bgmVolume = 0.75f;  // 기본 BGM 볼륨 (0-1 범위)
 
     private void Awake()
     {
-        // 싱글턴 패턴 구현
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬이 바뀌어도 유지
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
     }
 
     private void Start()
     {
-        PlayBGM(defaultBGM);
-    }
-
-    public void PlayBGM(AudioClip clip)
-    {
-        if (clip != null)
+        if (bgmAudioSource != null)
         {
-            bgmSource.clip = clip;
-            bgmSource.loop = true;
-            bgmSource.Play();
+            bgmAudioSource.volume = bgmVolume;
+            bgmAudioSource.loop = true;
         }
     }
 
-    public void PlayVFX(AudioClip clip)
+    public void PlayBGM(AudioClip newBGM)
     {
-        if (clip != null)
+        if (bgmAudioSource != null)
         {
-            vfxSource.PlayOneShot(clip); // OneShot은 동시에 여러 효과음을 재생 가능
+            bgmAudioSource.clip = newBGM;  
+            bgmAudioSource.Play(); 
         }
     }
 
-    /// <summary>
-    /// BGM 볼륨 조절
-    /// </summary>
-    /// <param name="volume">볼륨 (0~100)</param>
+    // BGM 볼륨을 변경하는 메서드
     public void SetBGMVolume(float volume)
     {
-        bgmSource.volume = Mathf.Clamp(volume / 100f, 0f, 1f);
-    }
-
-    /// <summary>
-    /// VFX 볼륨 조절
-    /// </summary>
-    /// <param name="volume">볼륨 (0~100)</param>
-    public void SetVFXVolume(float volume)
-    {
-        vfxSource.volume = Mathf.Clamp(volume / 100f, 0f, 1f);
+        bgmVolume = Mathf.Clamp01(volume); 
+        if (bgmAudioSource != null)
+        {
+            bgmAudioSource.volume = bgmVolume; 
+        }
     }
 }

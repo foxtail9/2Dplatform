@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public AudioClip newBGM;
+    public AudioClip newBGM; 
 
     private void Awake()
     {
-        ChangeBGM();
+        ChangeBGM(); 
     }
 
     private void ChangeBGM()
