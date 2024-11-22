@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ContainableItemNum: 6
   ItemName: "\uAC15\uCCA0 \uC911\uAC11"
-  ItemExplanation: 
+  ItemExplanation: "\uB9E4\uC6B0 \uBB34\uAC70\uC6CC \uBCF4\uC774\uB294 \uC911\uAC11.
+    \uD2BC\uD2BC\uD558\uAE34 \uD558\uC9C0\uB9CC \uC6C0\uC9C1\uC77C \uB584 \uB2F5\uB2F5\uD558\uB2E4.
+    \uADF8\uB798\uB3C4 \uB35C \uB2E4\uCE58\uB294\uAC8C \uB0AB\uAC9F\uC9C0!"
   IconSprite: {fileID: 638319907, guid: 2a194a77ecc35d343902443e22ad6a03, type: 3}
+  Power: 4
   type: 1
-  power: 8
   price: 0

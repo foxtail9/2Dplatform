@@ -18,6 +18,6 @@ MonoBehaviour:
     \uADF8\uB9AC \uD2BC\uD2BC\uD558\uC9C4 \uC54A\uC9C0\uB9CC \uC548\uC785\uB294\uAC83\uBCF4\uB2E4\uB294
     \uB0AB\uB2E4."
   IconSprite: {fileID: 1693891344, guid: 2a194a77ecc35d343902443e22ad6a03, type: 3}
+  Power: 1
   type: 1
-  power: 3
   price: 0

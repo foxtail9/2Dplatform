@@ -1,9 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
     public int maxHealth = 50; 
-    public int currentHealth;  
+    public int currentHealth;
+    public GameObject dropItem;
+    public List<ContainableItem> dropItems;
+    public GameObject OnfieldItem;
+    public List<OnFieldItem> onFieldItems;
 
     private void Start()
     {
@@ -15,6 +20,9 @@ public class EnemyDamage : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            GameObject temp = Instantiate(dropItem, transform.position, Quaternion.identity);
+            int i = Random.Range(0, dropItems.Count);
+            temp.GetComponent<DropItem>().itemData = dropItems[i];
             Die();
         }
     }

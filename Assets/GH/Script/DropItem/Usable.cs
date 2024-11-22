@@ -15,7 +15,7 @@ public class Usable : ContainableItem
     public override void GetItem(GameObject playerObject)
     {
         //아이템을 인벤토리에 추가.이미 있다면 갯수 증가.
-        CharacterInventory characterInventory = playerObject.GetComponent<CharacterInventory>();
+        CharacterInventory characterInventory = playerObject.GetComponent<Player>().inventory;
         if (characterInventory.itemList.Contains(this)) { int temp = characterInventory.itemList.IndexOf(this); characterInventory.itemCount[temp]++; return; }
         characterInventory.itemList.Add(this);
         characterInventory.itemCount.Add(1);

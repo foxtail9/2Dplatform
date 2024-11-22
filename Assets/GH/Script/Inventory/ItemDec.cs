@@ -49,15 +49,20 @@ public class ItemDec : MonoBehaviour
             itemSpec.gameObject.SetActive(true);
             itemContent.gameObject.SetActive(true);
 
+            EquipBtn.SetActive(false);
+            UnequipBtn.SetActive(false);
+            UseBtn.SetActive(false);
+            DiscardBtn.SetActive(false);
+
             if (itemData as Usable != null)
             {
                 UseBtn.SetActive(true);
             }
-            else if (itemData as Equipment != null /*&& 현재 장착중인 아이템의 아이템 데이터와 이 아이템 데이터가 같을 경우, 쉽게 말해 선택한 아이템이 장착된 상태일 경우*/)
+            else if (itemData as Equipment != null && ((transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == itemData as Equipment) || (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == itemData as Equipment)))
             {
                 UnequipBtn.SetActive(true);
             }
-            else if (itemData as Equipment != null /*&& 현재 장착중인 아이템의 아이템 데이터와 이 아이템 데이터가 다를 경우, 쉽게 말해 선택한 아이템이 장착되지 않은 상태일 경우*/)
+            else if (itemData as Equipment != null)
             {
                 EquipBtn.SetActive(true);
             }
@@ -80,21 +85,21 @@ public class ItemDec : MonoBehaviour
 
     public void OnEquipBtn()
     {
-        //아이템 타입을 참고해 현재 장착중인 아이템의 데이터를 선택한걸로 바꾸고 각 스펙 계산
+        transform.root.GetChild(1).GetComponent<CharacterInventory>().player.EquipItem(curItemData as Equipment);
         inventory.UpdateInventoryUI();
         SetItemData(curItemData);
     }
 
     public void OnUnequipBtn()
     {
-        //아이템 타입을 참고해 현재 장착중인 아이템의 데이터를 null로 바꾸고 각 스펙 계산
+        transform.root.GetChild(1).GetComponent<CharacterInventory>().player.UnequipItem(curItemData as Equipment);
         inventory.UpdateInventoryUI();
         SetItemData(curItemData);
     }
 
     public void OnUseBtn()
     {
-        //사용 효과 계산(지금은 체력 회복 밖에 없음)
+        transform.root.GetChild(1).GetComponent<CharacterInventory>().player.Heal(curItemData.Power);
         int index = inventory.itemList.IndexOf(curItemData);
         inventory.itemCount[index]--;
         if (inventory.itemCount[index] <= 0)
@@ -108,6 +113,7 @@ public class ItemDec : MonoBehaviour
 
     public void OnDiscardBtn()
     {
+        transform.root.GetChild(1).GetComponent<CharacterInventory>().player.UnequipItem(curItemData as Equipment);
         int index = inventory.itemList.IndexOf(curItemData);
         inventory.itemCount.RemoveAt(index);
         inventory.itemList.RemoveAt(index);

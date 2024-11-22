@@ -19,8 +19,10 @@ public class Player : MonoBehaviour
     private bool canAttack = true; 
     private Rigidbody2D rb;
 
-    private Equipment equippedWeapon;
-    private Equipment equippedArmor; 
+    public Equipment equippedWeapon = null;
+    public Equipment equippedArmor = null;
+
+    public CharacterInventory inventory;
 
     private void Start()
     {
@@ -162,5 +164,11 @@ public class Player : MonoBehaviour
         {
             Die();
         }
+    }
+
+    public void Heal(int healAmount)
+    {
+        currentHealth += healAmount;
+        if (currentHealth >= maxHealth) { currentHealth = maxHealth; }
     }
 }

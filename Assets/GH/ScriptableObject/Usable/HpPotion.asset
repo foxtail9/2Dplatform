@@ -18,5 +18,5 @@ MonoBehaviour:
     \uB0A0 \uAC83 \uCC98\uB7FC \uC0DD\uACBC\uC9C0\uB9CC \uC0AC\uC2E4 \uAF64 \uB9DB
     \uC5C6\uB2E4."
   IconSprite: {fileID: -1360136427, guid: 2a194a77ecc35d343902443e22ad6a03, type: 3}
-  Power: 0
+  Power: 50
   type: 0

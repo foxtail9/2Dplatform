@@ -9,6 +9,6 @@ public class HealFragment : OnFieldItem
     private int HealAmount;
     public override void GetItem(GameObject PlayerObject)
     {
-        // PlayerObject.GetComponent<PlayerState>().HP+=HealAmount;
+        PlayerObject.GetComponent<Player>().Heal(HealAmount);
     }
 }

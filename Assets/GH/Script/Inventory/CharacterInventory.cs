@@ -11,6 +11,7 @@ public class CharacterInventory : MonoBehaviour
     public List<ContainableItem> itemList;
     public List<int> itemCount;
     public ItemDec itemDec;
+    public Player player;
 
     private void OnEnable()
     {

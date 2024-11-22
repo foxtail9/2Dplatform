@@ -19,6 +19,6 @@ MonoBehaviour:
     \uC801\uB2E4. \uAC00\uB054 \uC870\uAE08 \uCC0C\uADF8\uB7EC\uC9C8 \uC218\uB3C4
     \uC788\uACA0\uC9C0\uB9CC \uC774 \uC815\uB3C4\uBA74 \uAD1C\uCC2E\uACA0\uC9C0."
   IconSprite: {fileID: -518397859, guid: 2a194a77ecc35d343902443e22ad6a03, type: 3}
+  Power: 2
   type: 1
-  power: 5
   price: 0

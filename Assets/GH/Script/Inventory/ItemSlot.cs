@@ -15,7 +15,7 @@ public class ItemSlot : MonoBehaviour
 
     public void Reset()
     {
-        item=null;
+        item = null;
         image.GetComponent<Image>().sprite = null;
         image.SetActive(false);
         itemQuantity.GetComponent<TextMeshProUGUI>().text = null;
@@ -26,14 +26,33 @@ public class ItemSlot : MonoBehaviour
     public void SetItem(ContainableItem containableItem, int quantity)
     {
         item = containableItem;
-        image.GetComponent<Image>().sprite=containableItem.IconSprite;
+        image.GetComponent<Image>().sprite = containableItem.IconSprite;
         image.SetActive(true);
         itemQuantity.GetComponent<TextMeshProUGUI>().text = quantity.ToString();
+        itemQuantity.SetActive(false);
         if (containableItem as Usable != null) itemQuantity.SetActive(true);
-        if(containableItem as Equipment != null /*&& 현재 장착되어 있는 아이템과 같은지 비교*/ )
+        if (containableItem as Equipment != null)
         {
-            itemEquiped.SetActive(true);
-            itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
+            if (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon != null)
+            {
+                if ((containableItem as Equipment).type == EquipmentType.Weapon && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == containableItem as Equipment)
+                {
+                    itemEquiped.SetActive(true);
+                    itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
+                }
+            }
+            else if (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null)
+            {
+                if ((containableItem as Equipment).type == EquipmentType.Armor && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == containableItem as Equipment)
+                {
+                    itemEquiped.SetActive(true);
+                    itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
+                }
+            }
+            else
+            {
+                itemEquiped.SetActive(false);
+            }
         }
     }
 
