@@ -24,11 +24,14 @@ public class Player : MonoBehaviour
 
     public CharacterInventory inventory;
 
+    public GameObject gameOverCanvas;
+
     private void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         rb = GetComponent<Rigidbody2D>();
+        Time.timeScale = 1.0f;
     }
 
     private void Update()
@@ -112,6 +115,16 @@ public class Player : MonoBehaviour
     private void Die()
     {
         animator.SetBool("IsDead", true);
+        StartCoroutine(ShowGameOverCanvas());
+    }
+
+    private System.Collections.IEnumerator ShowGameOverCanvas()
+    {
+        yield return new WaitForSeconds(1f); 
+        if (gameOverCanvas != null)
+        {
+            gameOverCanvas.SetActive(true);
+        }
     }
 
     private void Attack()
