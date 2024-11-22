@@ -9,7 +9,7 @@ public class DropItemInfo : MonoBehaviour
     [SerializeField]
     private TextMeshPro itemDescription;
     private Collider2D collision;
-    
+
     public void SetInfo(ContainableItem item, Collider2D playerCollider)
     {
         itemData = item;

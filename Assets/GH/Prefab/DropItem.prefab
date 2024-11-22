@@ -272,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemData: {fileID: 0}
   itemImage: {fileID: 8915885280825391644}
-  itemInfo: {fileID: 1537940293835805940}
+  itemInfo: {fileID: 7627120694268356142}
 --- !u!61 &4611405423044503285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8893952618141088862}
   - component: {fileID: 2786506811698191809}
-  - component: {fileID: 1537940293835805940}
+  - component: {fileID: 7627120694268356142}
   m_Layer: 0
   m_Name: DropItemInfo
   m_TagString: Untagged
@@ -406,7 +406,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1537940293835805940
+--- !u!114 &7627120694268356142
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
