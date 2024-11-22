@@ -58,7 +58,7 @@ public class ItemDec : MonoBehaviour
             {
                 UseBtn.SetActive(true);
             }
-            else if (itemData as Equipment != null && ((transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == itemData as Equipment) || (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == itemData as Equipment)))
+            else if (itemData as Equipment != null && (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == itemData as Equipment|| transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == itemData as Equipment))
             {
                 UnequipBtn.SetActive(true);
             }
