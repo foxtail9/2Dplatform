@@ -1767,6 +1767,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 0
+  animator: {fileID: 552969343}
+--- !u!95 &552969343 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7726954028953174847, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
+  m_PrefabInstance: {fileID: 466390136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &562290247
 PrefabInstance:
   m_ObjectHideFlags: 0

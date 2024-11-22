@@ -3,7 +3,8 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public int maxHealth = 50; 
-    public int currentHealth;  
+    public int currentHealth;
+    public Animator animator;
 
     private void Start()
     {
@@ -12,6 +13,7 @@ public class EnemyDamage : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("Hurt");
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
