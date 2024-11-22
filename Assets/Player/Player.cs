@@ -162,6 +162,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            TakeDamage(100);
             Die();
         }
     }
