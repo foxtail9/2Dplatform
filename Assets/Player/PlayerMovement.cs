@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip jumpSound;
     public AudioClip attackSound;
+    
 
 
     void Update()
@@ -61,12 +62,8 @@ public class PlayerMovement : MonoBehaviour
         {
             // 애니메이션 트리거 설정
             animator.SetTrigger("Attack");
-
-            // 공격 사운드 재생
-            if (audioSource != null && attackSound != null)
-            {
-                audioSource.PlayOneShot(attackSound);
-            }
+            
+            audioSource.PlayOneShot(attackSound);
         }
     }
 

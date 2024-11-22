@@ -25,7 +25,8 @@ public class Player : MonoBehaviour
     public CharacterInventory inventory;
 
     public GameObject gameOverCanvas;
-
+    public AudioSource audioSource;
+    public AudioClip hitSound;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -106,7 +107,7 @@ public class Player : MonoBehaviour
         animator.SetTrigger("Hurt");
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         healthBar.SetHealth(currentHealth);
-
+        audioSource.PlayOneShot(hitSound);
         if (currentHealth <= 0)
         {
             Die();
