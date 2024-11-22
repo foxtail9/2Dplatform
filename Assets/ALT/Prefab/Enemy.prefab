@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6274134344304884176}
   - component: {fileID: 7913329113622060525}
-  - component: {fileID: 5905771907715784103}
+  - component: {fileID: 5670526132844590485}
   - component: {fileID: 4537434492958067415}
   - component: {fileID: 7726954028953174847}
   - component: {fileID: 8405234033332787171}
@@ -64,7 +64,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5905771907715784103
+--- !u!114 &5670526132844590485
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,17 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 0
-  dropItem: {fileID: 2035338502546781666, guid: 197dec6d0b4143c408db1c0b6dd27ba7, type: 3}
-  dropItems:
-  - {fileID: 11400000, guid: ae57d0ebc1e9e3b43975c8af518cf51e, type: 2}
-  - {fileID: 11400000, guid: a1f3f0ad9ec55464fad4a20ebece1eb8, type: 2}
-  - {fileID: 11400000, guid: d2dcdbde4abeec34c824647c501a2e06, type: 2}
-  - {fileID: 11400000, guid: 628a011122c5c4f4fb383be494f1a3f9, type: 2}
-  - {fileID: 11400000, guid: b3d81639cf1b29744abd2839a9529c41, type: 2}
-  - {fileID: 11400000, guid: 0843ca419c03d9846af9739b8a4dfdee, type: 2}
-  - {fileID: 11400000, guid: 018c0fd59d272fe459ea672cf29a6ad1, type: 2}
-  OnfieldItem: {fileID: 0}
-  onFieldItems: []
+  animator: {fileID: 7726954028953174847}
 --- !u!212 &4537434492958067415
 SpriteRenderer:
   m_ObjectHideFlags: 0
