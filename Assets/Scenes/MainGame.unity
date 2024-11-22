@@ -6782,6 +6782,8 @@ MonoBehaviour:
   itemCount: 0100000001000000
   itemDec: {fileID: 1558129426}
   player: {fileID: 2077827023}
+  money: 0
+  moneyText: {fileID: 1578187217}
 --- !u!1001 &1667671580
 PrefabInstance:
   m_ObjectHideFlags: 0

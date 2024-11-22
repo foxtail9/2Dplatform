@@ -12,6 +12,8 @@ public class CharacterInventory : MonoBehaviour
     public List<int> itemCount;
     public ItemDec itemDec;
     public Player player;
+    public int money=0;
+    public TextMeshProUGUI moneyText;
 
     private void OnEnable()
     {
@@ -31,6 +33,12 @@ public class CharacterInventory : MonoBehaviour
                 itemSlots[i].Reset();
             }
         }
+    }
+
+    public void GetMoney(int coin)
+    {
+        money += coin;
+        moneyText.text = money.ToString() + " Gold";
     }
 
     public void OnClickExit()

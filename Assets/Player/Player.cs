@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
         {
             Vector2 knockbackDirection = (transform.position - collision.transform.position).normalized;
             Knockback(10, knockbackDirection);
+            TakeDamage(10);
         }
     }
 

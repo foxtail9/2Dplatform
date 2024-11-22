@@ -10,7 +10,7 @@ public class Coin : OnFieldItem
     public override void GetItem(GameObject PlayerObject)
     {
         //캐릭터 정보 중 돈 증가
-        CharacterInventory characterInventory = PlayerObject.GetComponent<CharacterInventory>();
-        /*characterInventory.money += coinAmount;*/
+        CharacterInventory characterInventory = PlayerObject.GetComponent<Player>().inventory;
+        characterInventory.GetMoney(coinAmount);
     }
 }
