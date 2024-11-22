@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        healthBar.SetHealth(currentHealth);
         if (Input.GetKeyDown(KeyCode.W) && canAttack)
         {
             Attack();
