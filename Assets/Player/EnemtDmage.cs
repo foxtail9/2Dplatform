@@ -6,7 +6,6 @@ public class EnemyDamage : MonoBehaviour
     public int maxHealth = 50; 
     public int currentHealth;
     public Animator animator;
-    public int currentHealth;
     public GameObject dropItem;
     public List<ContainableItem> dropItems;
     public GameObject OnfieldItem;
