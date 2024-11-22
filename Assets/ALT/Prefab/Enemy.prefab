@@ -10,13 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6274134344304884176}
   - component: {fileID: 7913329113622060525}
+  - component: {fileID: 5670526132844590485}
   - component: {fileID: 4537434492958067415}
   - component: {fileID: 7726954028953174847}
   - component: {fileID: 8405234033332787171}
   - component: {fileID: 4350676108028266134}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +64,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &5670526132844590485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3540849745962421532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70997f31f577754ca1f83bf5af0b308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  currentHealth: 0
+  animator: {fileID: 7726954028953174847}
 --- !u!212 &4537434492958067415
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -148,7 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b163d690b03fe47b19244e28b516910e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 2
   nextMove: 0
+  wallCheckDistance: 1
 --- !u!68 &4350676108028266134
 EdgeCollider2D:
   m_ObjectHideFlags: 0

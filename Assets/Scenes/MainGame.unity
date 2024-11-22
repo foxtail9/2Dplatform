@@ -1672,14 +1672,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 3540849745962421532, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3540849745962421532, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 6274134344304884176, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.577813
@@ -1720,21 +1712,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8405234033332787171, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8405234033332787171, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-      propertyPath: wallCheckDistance
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3540849745962421532, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 552969340}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
 --- !u!1 &547117410
 GameObject:
@@ -1772,31 +1753,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &552969333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3540849745962421532, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-  m_PrefabInstance: {fileID: 466390136}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &552969340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552969333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70997f31f577754ca1f83bf5af0b308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 30
-  currentHealth: 0
-  animator: {fileID: 552969343}
---- !u!95 &552969343 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7726954028953174847, guid: 8067ebd111462419cb9da31882a276d8, type: 3}
-  m_PrefabInstance: {fileID: 466390136}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &562290247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2728,6 +2684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stage
       objectReference: {fileID: 0}
+    - target: {fileID: 2644289935359975940, guid: 70b9321022ca5401e9600e81abbcb08d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2884482849546830539, guid: 70b9321022ca5401e9600e81abbcb08d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2767,6 +2727,10 @@ PrefabInstance:
     - target: {fileID: 2884482849546830539, guid: 70b9321022ca5401e9600e81abbcb08d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3386299368674110226, guid: 70b9321022ca5401e9600e81abbcb08d, type: 3}
+      propertyPath: damage
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3390831268641064611, guid: 70b9321022ca5401e9600e81abbcb08d, type: 3}
       propertyPath: m_Follow
@@ -6295,6 +6259,10 @@ PrefabInstance:
     - target: {fileID: 3479536029976541993, guid: 8acd5ff80b35db442b3454781273a6ec, type: 3}
       propertyPath: m_GravityScale
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479536029976541993, guid: 8acd5ff80b35db442b3454781273a6ec, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3840210506639602367, guid: 8acd5ff80b35db442b3454781273a6ec, type: 3}
       propertyPath: m_Name
