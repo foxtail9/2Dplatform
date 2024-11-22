@@ -97,13 +97,13 @@ public class ItemDec : MonoBehaviour
         //사용 효과 계산(지금은 체력 회복 밖에 없음)
         int index = inventory.itemList.IndexOf(curItemData);
         inventory.itemCount[index]--;
-        if (inventory.itemCount[index] < 0)
+        if (inventory.itemCount[index] <= 0)
         {
             inventory.itemCount.RemoveAt(index);
             inventory.itemList.RemoveAt(index);
-            SetItemData(null);
-            inventory.UpdateInventoryUI();
+            SetItemData(null);   
         }
+        inventory.UpdateInventoryUI();
     }
 
     public void OnDiscardBtn()
