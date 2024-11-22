@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 3479536029976541993}
   - component: {fileID: 5819820627872738034}
   - component: {fileID: 4770169209422005507}
-  - component: {fileID: 3418041759133807163}
   - component: {fileID: 732596095742401247}
+  - component: {fileID: 2710810904967489790}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -63,7 +63,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &5819820627872738034
 MonoBehaviour:
@@ -122,6 +122,42 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 55fddaa1-67e1-4976-a574-40bf948e425d
     m_ActionName: Player/Move[/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Openinventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: cfef7ed4-e5da-4d05-9aa4-f8aa83acede6
+    m_ActionName: Player/inventory[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: Openmenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 632b512e-6674-4a05-a616-c000e781f5ca
+    m_ActionName: Player/Menu[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 050da99c-8f92-456c-bc97-38fff0660069
+    m_ActionName: Player/Attack[/Keyboard/w]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -141,8 +177,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3479536029976541993}
   animator: {fileID: 8153471326665416273}
---- !u!61 &3418041759133807163
-BoxCollider2D:
+  jumpForce: 25
+  audioSource: {fileID: 0}
+  jumpSound: {fileID: 0}
+  attackSound: {fileID: 0}
+--- !u!114 &732596095742401247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840210506639602367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcb2e112f0dc7943958e5932d4d0d9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  attackDamage: 10
+  knockbackForce: 25
+  attackAnimator: {fileID: 410606516330183331}
+  animator: {fileID: 8153471326665416273}
+  attackPoint: {fileID: 5046397298055029277}
+  attackRange: 0.4
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  defense: 0
+  equippedWeapon: {fileID: 0}
+  equippedArmor: {fileID: 0}
+  inventory: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+--- !u!70 &2710810904967489790
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,42 +242,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.009835839}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.9803283}
-  m_EdgeRadius: 0
---- !u!114 &732596095742401247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840210506639602367}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcb2e112f0dc7943958e5932d4d0d9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  attackDamage: 10
-  knockbackForce: 5
-  attackAnimator: {fileID: 410606516330183331}
-  animator: {fileID: 8153471326665416273}
-  attackPoint: {fileID: 5046397298055029277}
-  attackRange: 0.4
-  enemyLayers:
-    serializedVersion: 2
-    m_Bits: 64
+  m_Offset: {x: 0.16282177, y: -0.05795479}
+  m_Size: {x: 0.5827904, y: 0.8288994}
+  m_Direction: 0
 --- !u!1 &6321947705830277079
 GameObject:
   m_ObjectHideFlags: 0

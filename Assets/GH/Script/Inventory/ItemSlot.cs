@@ -33,21 +33,16 @@ public class ItemSlot : MonoBehaviour
         if (containableItem as Usable != null) itemQuantity.SetActive(true);
         if (containableItem as Equipment != null)
         {
-            if (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon != null)
+
+            if ((containableItem as Equipment).type == EquipmentType.Weapon && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == containableItem as Equipment)
             {
-                if ((containableItem as Equipment).type == EquipmentType.Weapon && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedWeapon == containableItem as Equipment)
-                {
-                    itemEquiped.SetActive(true);
-                    itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
-                }
+                itemEquiped.SetActive(true);
+                itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
             }
-            else if (transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null)
+            else if ((containableItem as Equipment).type == EquipmentType.Armor && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == containableItem as Equipment)
             {
-                if ((containableItem as Equipment).type == EquipmentType.Armor && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor != null && transform.root.GetChild(1).GetComponent<CharacterInventory>().player.equippedArmor == containableItem as Equipment)
-                {
-                    itemEquiped.SetActive(true);
-                    itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
-                }
+                itemEquiped.SetActive(true);
+                itemEquiped.GetComponent<TextMeshProUGUI>().text = "E";
             }
             else
             {
