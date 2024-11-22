@@ -5,6 +5,8 @@ public class EnemyDamage : MonoBehaviour
 {
     public int maxHealth = 50; 
     public int currentHealth;
+    public Animator animator;
+    public int currentHealth;
     public GameObject dropItem;
     public List<ContainableItem> dropItems;
     public GameObject OnfieldItem;
@@ -17,6 +19,7 @@ public class EnemyDamage : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("Hurt");
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
