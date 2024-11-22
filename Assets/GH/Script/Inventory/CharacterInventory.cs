@@ -38,7 +38,7 @@ public class CharacterInventory : MonoBehaviour
     public void GetMoney(int coin)
     {
         money += coin;
-        moneyText.text = money.ToString();
+        moneyText.text = money.ToString() + " Gold";
     }
 
     public void OnClickExit()
